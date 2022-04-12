@@ -18,8 +18,6 @@ function App() {
   return (
     <div className="App">
       <HeaderComponent item="This is a heading" />
-      <hr />
-      <Navigation itemList={['item1', 'item2', 'item3']} />
     </div>
   );
 }
@@ -32,24 +30,5 @@ const HeaderComponent: React.FC<PropType> = ({ item }): JSX.Element => {
     </div>
   );
 }
-
-const Navigation: React.FC<PropType> = ({ itemList }): JSX.Element => {
-  return (
-    <div>
-      <ul>
-        {itemList?.map(item => {
-          return <NavListItem item={item} />
-        })}
-      </ul>
-    </div>
-  );
-}
-
-const NavListItem: React.FC<PropType> = ({ item }): JSX.Element => {
-  return (
-    <li>{item}</li>
-  );
-}
-
 
 export default App;

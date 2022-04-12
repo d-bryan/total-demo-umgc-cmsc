@@ -31,4 +31,8 @@ const HeaderComponent: React.FC<PropType> = ({ item }): JSX.Element => {
   );
 }
 
+const ListItem: React.FC<PropType> = ({ item }): JSX.Element => {
+  return <li>{item}</li>
+}
+
 export default App;
